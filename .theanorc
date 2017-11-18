@@ -1,0 +1,16 @@
+[global]
+device = cuda
+floatX = float32
+exception_verbosity = high
+
+[cuda]
+root = /usr/local/cuda
+
+[gpuarray]
+# preallocate = 1850
+
+[scan]
+allow_output_prealloc = True
+
+[lib]
+cnmem = .90
