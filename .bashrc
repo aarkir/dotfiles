@@ -161,6 +161,8 @@ alias Pico="sudo ssh -i ~/.ssh/pico.pem aarkir@shell2017.picoctf.com"
 export EDITOR=vim
 
 alias log-out="gnome-session-quit"
+alias anki-latex="sudo texhash & sudo mktexlsr"
+alias qwermatlab="matlab -nodesktop -nosplash"
 
 function countdown(){
    date1=$((`date +%s` + $1)); 
