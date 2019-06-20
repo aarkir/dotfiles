@@ -25,6 +25,7 @@ Clone into a subdirectory then copy into ~. Note that some files are personalize
   - `:bp` to go to previous file. same for `n`,`f`,`l`, and `w`
   - Change the title of multiple files at once with "rename 's/[old]/[new]/g' *
   - refresh NERDTree with `r`
+  - vimlatex or latex suite http://vim-latex.sourceforge.net/documentation/latex-suite-quickstart.html
 - Bash
   - unzip to directory with `unzip (file.zip) -d (dir)`
   - `play -n synth whitenoise`
@@ -52,6 +53,10 @@ Clone into a subdirectory then copy into ~. Note that some files are personalize
   2. Documents includes many other features in addition to playing music, but doesn't have playlists/albums/artists besides the folder the songs are in. Also, it is 150 MB while the other two listed apps are ~50MB
   3. VLC (for mobile) supports captions and the host of extensions it does on the PC, but functions as a worse music player than Documents because it doesn't allow normal things like skipping through songs.
 
+### mpsyt
+
+- if you get hit with maximum api responses, create an api key at https://console.developers.google.com/apis/, then run `set api_key [api_key]`
+
 ### Installed Things
 
 - https://github.com/tmux-plugins/tpm
@@ -60,3 +65,6 @@ Clone into a subdirectory then copy into ~. Note that some files are personalize
 - https://www.chinesetextanalyser.com/
 - dict (dictionary), dictd (local server for offline) to try to get an offline Chinese dict, but looks like there are only a couple (xdict, star---) in external repos and they are english to chinese. I could use youdao or another non-terminal program i guess.
 
+### Latex
+
+- to use a URL in a frame with Beamer, use the `[fragile]` tag for the frame

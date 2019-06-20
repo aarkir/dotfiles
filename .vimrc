@@ -35,7 +35,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+" 
 Plugin 'altercation/vim-colors-solarized'
+" convenient sessions
 Plugin 'tpope/vim-obsession'
 
 " All of your Plugins must be added before the following line
@@ -54,7 +56,6 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 let g:Tex_DefaultTargetFormat = 'pdf'
-
 
 
 " OLDER
@@ -128,3 +129,24 @@ let g:syntastic_check_on_wq = 0
 " https://stackoverflow.com/questions/1416572/vi-vim-restore-opened-files
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
 map <F3> :source ~/vim_session <cr>     " And load session with F3
+
+" for vim-latex / latex suite
+let g:Tex_Env_frame = "\\begin{frame}{<++>}\<CR><++>\<CR>\\end{frame}\<CR><++>"
+let g:Tex_Env_defn = "\\begin{definition}[<++>]\<CR><++>\<CR>\\end{definition}\<++>"
+" the following lines allow alt commands 
+" http://vim-latex.sourceforge.net/documentation/latex-suite/altkey-mappings.html
+" https://tex.stackexchange.com/questions/130389/vim-latex-suite-alt-macro-not-working/249078
+let g:Tex_AdvancedMath = 1
+set winaltkeys=no
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+set timeout ttimeoutlen=50
+
+" noremap <C-j> <Esc>/<++><CR><Esc>cf>
+noremap <M-b> <Esc>i\mathbb{<Esc>la}
+noremap <M-c> <Esc>i\mathcal{<Esc>la}
+noremap <M-o> <Esc>i\overline{<Esc>la}

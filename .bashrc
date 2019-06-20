@@ -172,3 +172,5 @@ function countdown(){
    done
    s
 }
+
+xmodmap ~/.Xmodmap
