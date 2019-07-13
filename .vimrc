@@ -133,6 +133,8 @@ map <F3> :source ~/vim_session <cr>     " And load session with F3
 " for vim-latex / latex suite
 let g:Tex_Env_frame = "\\begin{frame}{<++>}\<CR><++>\<CR>\\end{frame}\<CR><++>"
 let g:Tex_Env_defn = "\\begin{definition}[<++>]\<CR><++>\<CR>\\end{definition}\<++>"
+let g:Tex_Env_rmk = "\\begin{remark}[<++>]\<CR><++>\<CR>\\end{remark}\<++>"
+let g:Tex_Env_thm = "\\begin{theorem}[<++>]\<CR><++>\<CR>\\end{theorem}\<++>"
 " the following lines allow alt commands 
 " http://vim-latex.sourceforge.net/documentation/latex-suite/altkey-mappings.html
 " https://tex.stackexchange.com/questions/130389/vim-latex-suite-alt-macro-not-working/249078
@@ -150,3 +152,15 @@ set timeout ttimeoutlen=50
 noremap <M-b> <Esc>i\mathbb{<Esc>la}
 noremap <M-c> <Esc>i\mathcal{<Esc>la}
 noremap <M-o> <Esc>i\overline{<Esc>la}
+
+" sagemath
+augroup filetypedetect
+  au! BufRead,BufNewFile *.sage,*.spyx,*.pyx setfiletype python
+augroup END
+""""""
+" Sage settings (from Franco Saliola)
+autocmd BufRead,BufNewFile *.sage,*.pyx,*.spyx set filetype=python
+autocmd Filetype python set tabstop=4|set shiftwidth=4|set expandtab
+"autocmd FileType python set makeprg=sage\ -b\ &&\ sage\ -t\ %
+autocmd FileType python set makeprg=sage\ %
+

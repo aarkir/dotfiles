@@ -329,7 +329,7 @@ include "%L"
 # I'm hoping { can work as a set mnemonic
 <Multi_key> <braceleft> <U>		: "∪"	U222A		# UNION
 <Multi_key> <braceleft> <asciicircum>	: "∩"	U2229		# INTERSECTION
-<Multi_key> <braceleft> <parenleft>	: "⊂"	U2282		# SUBSET OF
+<Multi_key> <braceleft> <parenleft>	: "⊂"	U2282		# UBSET OF
 <Multi_key> <braceleft> <equal> <parenleft> : "⊆" U2286		# SUBSET OF OR EQUAL TO
 <Multi_key> <exclam> <braceleft> <parenleft> : "⊄" U2284        # NOT A SUBSET OF
 <Multi_key> <slash> <braceleft> <parenleft>  : "⊄" U2284        # NOT A SUBSET OF
@@ -3555,3 +3555,8 @@ include "%L"
 <Multi_key>  <dollar> <numbersign> <m> <8> :  "𝟾"   U1D7FE	# MATHEMATICAL MONOSPACE DIGIT EIGHT
 #- 1D7FF;MATHEMATICAL MONOSPACE DIGIT NINE;Nd;0;EN;<font> 0039;9;9;9;N;;;;;
 <Multi_key>  <dollar> <numbersign> <m> <9> :  "𝟿"   U1D7FF	# MATHEMATICAL MONOSPACE DIGIT NINE
+
+
+# my own
+
+# <Multi_key> <s> <i> <m> : 

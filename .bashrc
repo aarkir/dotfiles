@@ -156,13 +156,10 @@ export PATH=$PATH:"$HOME/software"
 export PATH=$PATH:"/home/aarkir/software/node-v8.7.0-linux-x64/bin"
 
 alias Xc="xclip -selection clipboard"
-alias Pico="sudo ssh -i ~/.ssh/pico.pem aarkir@shell2017.picoctf.com"
 
 export EDITOR=vim
 
 alias log-out="gnome-session-quit"
-alias anki-latex="sudo texhash & sudo mktexlsr"
-alias qwermatlab="matlab -nodesktop -nosplash"
 
 function countdown(){
    date1=$((`date +%s` + $1)); 
@@ -173,4 +170,3 @@ function countdown(){
    s
 }
 
-xmodmap ~/.Xmodmap

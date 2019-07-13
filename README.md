@@ -68,3 +68,13 @@ Clone into a subdirectory then copy into ~. Note that some files are personalize
 ### Latex
 
 - to use a URL in a frame with Beamer, use the `[fragile]` tag for the frame
+- to hide a slide with Beamer, put a `<presentation:0>` after the frame's begin tag
+- suppress a chktex warning with `% chktex 8` at the end of the line (https://tex.stackexchange.com/questions/208374/how-can-i-tell-chktex-that-i-have-checked-the-next-line)
+
+### Unicode
+
+- get a multiplication sign × with <Multi-key> <x> <x> it is default with XCompose
+
+### Vim
+
+- Replace all lines containing a phrase with `:g/[phrase]/d`
