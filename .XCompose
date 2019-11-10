@@ -501,8 +501,6 @@ include "%L"
 
 # block U+209x
 <Multi_key> <underscore> <a>	       : "ₐ"  U2090	  # LATIN SUBSCRIPT SMALL LETTER A
-<Multi_key> <underscore> <e>	       : "ₑ"  U2091	  # LATIN SUBSCRIPT SMALL LETTER E
-<Multi_key> <underscore> <o>	       : "ₒ"  U2092	  # LATIN SUBSCRIPT SMALL LETTER O
 <Multi_key> <underscore> <x>	       : "ₓ"  U2093	  # LATIN SUBSCRIPT SMALL LETTER X
 <Multi_key> <underscore> <h>	       : "ₕ"  U2095	  # LATIN SUBSCRIPT SMALL LETTER H
 <Multi_key> <underscore> <k>           : "ₖ"  U2096	  # LATIN SUBSCRIPT SMALL LETTER K
@@ -3563,3 +3561,5 @@ include "%L"
 <Multi_key> <parenleft> <minus> <greater> : "↪"  U21AA # RIGHTWARDS ARROW WITH HOOK
 <Multi_key> <Multi_key> <p> <r> <o> <d> : "∏" U220F # "N-ARY PRODUCT"
 <Multi_key> <v> <e> <r> <t> : "‖" U2016 # DOUBLE VERTICAL LINE
+<Multi_key> <m> <i> <d> : "∣" U2223
+<Multi_key> <n> <m> <i> <d> : "∤" U2224
