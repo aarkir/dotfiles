@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=anki
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[zh_HK]=Anki
+Name=Anki
+Comment[zh_HK]=
+Comment=

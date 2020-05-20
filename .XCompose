@@ -327,7 +327,7 @@ include "%L"
 <Multi_key> <0> <slash>                 : "∅"   U2205           # EMPTY SET (thanks jsled!)
 <Multi_key> <slash> <0>                 : "∅"   U2205           # EMPTY SET
 # I'm hoping { can work as a set mnemonic
-<Multi_key> <braceleft> <U>		: "∪"	U222A		# UNION
+<Multi_key> <braceleft> <U>		: "∪"	U222A		# UNIO
 <Multi_key> <braceleft> <asciicircum>	: "∩"	U2229		# INTERSECTION
 <Multi_key> <braceleft> <parenleft>	: "⊂"	U2282		# UBSET OF
 <Multi_key> <braceleft> <equal> <parenleft> : "⊆" U2286		# SUBSET OF OR EQUAL TO
@@ -1910,6 +1910,7 @@ include "%L"
 #- 1D4CF;MATHEMATICAL SCRIPT SMALL Z;Ll;0;L;<font> 007A;;;;N;;;;;
 <Multi_key>  <dollar> <numbersign> <s> <z> :  "𝓏"   U1D4CF	# MATHEMATICAL SCRIPT SMALL Z
 ## == BOLD SCRIPT
+## mathcal
 #- 1D4D0;MATHEMATICAL BOLD SCRIPT CAPITAL A;Lu;0;L;<font> 0041;;;;N;;;;;
 <Multi_key>  <dollar> <numbersign> <S> <A> :  "𝓐"   U1D4D0	# MATHEMATICAL BOLD SCRIPT CAPITAL A
 #- 1D4D1;MATHEMATICAL BOLD SCRIPT CAPITAL B;Lu;0;L;<font> 0042;;;;N;;;;;
@@ -3563,3 +3564,7 @@ include "%L"
 <Multi_key> <v> <e> <r> <t> : "‖" U2016 # DOUBLE VERTICAL LINE
 <Multi_key> <m> <i> <d> : "∣" U2223
 <Multi_key> <n> <m> <i> <d> : "∤" U2224
+<Multi_key> <bar> <minus> <greater> : "↦" U21A6
+<Multi_key> <Multi_key> <Multi_key> <backslash> : "∖" U2216
+<Multi_key> <Multi_key> <asciitilde> <asciitilde> : "～" UFF5E
+<Multi_key> <exclam> <minus> <braceleft> <parenleft> : "⊊" U228A        # subset not equal
