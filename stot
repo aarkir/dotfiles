@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $1 | opencc -i /dev/stdin | xclip -selection clipboard
