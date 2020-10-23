@@ -25,7 +25,7 @@ include "%L"
 <Multi_key> <c> <period> <period>	: "⋯"	U22EF		# MIDLINE HORIZONTAL ELLIPSIS
 <Multi_key> <slash> <period> <period>	: "⋰"	U22F0		# UP RIGHT DIAGONAL ELLIPSIS
 # To avoid conflict with \. for combining dot above.
-#<Multi_key> <backslash> <period> <period> : "⋱" U22F1		# DOWN RIGHT DIAGONAL ELLIPSIS
+<Multi_key> <backslash> <period> <period> : "⋱" U22F1		# DOWN RIGHT DIAGONAL ELLIPSIS
 <Multi_key> <period> <backslash> <period> : "⋱" U22F1		# DOWN RIGHT DIAGONAL ELLIPSIS
 # Will we someday regret this, wanting 2. for ⒉ ?
 <Multi_key> <2> <period>	 	  : "‥"	U2025		# TWO DOT LEADER
@@ -3568,3 +3568,4 @@ include "%L"
 <Multi_key> <Multi_key> <Multi_key> <backslash> : "∖" U2216
 <Multi_key> <Multi_key> <asciitilde> <asciitilde> : "～" UFF5E
 <Multi_key> <exclam> <minus> <braceleft> <parenleft> : "⊊" U228A        # subset not equal
+<Multi_key> <Multi_key> <p> <r> <o> <p> : "∝" U221D

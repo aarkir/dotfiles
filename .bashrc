@@ -147,19 +147,21 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/cuda-9.0/lib64"
 
 bind 'set match-hidden-files on'
 PS1='$ '
-alias s="spd-say done"
+alias speak="spd-say done"
 alias Fastai="cd ~/Desktop/courses/deeplearning1/nbs/"
 export DEVICE="cuda"
 export CUDA_ROOT="/usr/local/cuda"
 
 export PATH=$PATH:"$HOME/software"
-export PATH=$PATH:"/home/aarkir/software/node-v8.7.0-linux-x64/bin"
 
 alias Xc="xclip -selection clipboard"
 
 export EDITOR=vim
 
 alias log-out="gnome-session-quit"
+
+export PATH=$PATH:"/home/atkirtland/.local/bin"
+
 
 function countdown(){
    date1=$((`date +%s` + $1)); 
@@ -170,4 +172,51 @@ function countdown(){
    s
 }
 
+function unzd() {
+    if [[ $# != 1 ]]; then echo I need a single argument, the name of the archive to extract; return 1; fi
+    target="${1%.zip}"
+    unzip "$1" -d "${target##*/}"
+}
+
+export -f unzd
+
+
+export PATH=$PATH:"/home/aarkir/software/node-v8.7.0-linux-x64/bin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/atkirtland/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/atkirtland/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/atkirtland/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/atkirtland/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+alias cdvis='cd ~/Desktop/rips/rips2020afrl/visualizations'
+alias cdquick2='cd ~/Desktop/rips/rips2020afrl/quick2'
+alias oklang='okular ~/Desktop/todo/to-read/langtuteng.pdf'
+
+# ffmpeg -i input_file.mp4 -acodec copy -vcodec copy -f mov output_file.mov
+
+alias jpeg2jpg="find . -type f -name '*.jpeg' -print0 | xargs -0 rename 's/\.jpeg/\.jpg/'"
+# https://github.com/hluk/CopyQ/issues/1181
+export QT_IM_MODULE=ibus copyq
+# can possibly use this for some greek chars with RIME, otherwise nothing pops up for xcompose
+# https://wiki.archlinux.org/index.php/Fcitx5#RIME
+
+# cse587
+alias vimkindle="cp /media/atkirtland/Kindle/documents/My\ Clippings.txt ~/tmp/; vim ~/tmp/My\ Clippings.txt"
+# alias Mathematica="bash /usr/local/Wolfram/Mathematica/12.0/Executables/mathematica"
+export PATH=$PATH:/usr/local/Wolfram/Mathematica/12.0/Executables
+export PATH=$PATH:/home/atkirtland/eclipse/java-2020-06/eclipse
+export PATH=$PATH:/usr/local/MATLAB/R2020a/bin
+
+alias VimLatexHeader="sudo vim /usr/share/texmf/tex/latex/latex-header"
+# sudo texhash
 

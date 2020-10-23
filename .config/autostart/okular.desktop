@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=okular
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[zh_TW]=okular
+Name=okular
+Comment[zh_TW]=
+Comment=

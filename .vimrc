@@ -28,6 +28,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'https://github.com/Chiel92/vim-autoformat'
+Plugin 'https://github.com/ajh17/VimCompletesMe'
+
 Plugin 'vim-latex/vim-latex'
 
 Plugin 'vim-airline/vim-airline'
@@ -35,7 +37,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-" 
+"
 Plugin 'altercation/vim-colors-solarized'
 " convenient sessions
 Plugin 'tpope/vim-obsession'
@@ -97,8 +99,11 @@ set number " obvious
 " make
 " let &varname sets varname to option. internally, &var is the name of the
 " option
-set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ g++\ -Wall\ -Wextra\ -std=c++14\ -o\ %<\ %  
+set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ g++\ -Wall\ -Wextra\ -std=c++14\ -o\ %<\ %
 autocmd FileType tex setlocal makeprg=latex\ %;xdg-open\ %<.pdf\ &
+let g:tex_flavor='latex'
+let g:Tex_CompileRule_pdf = 'xelatex $*'
+" let g:Tex_CompileRule_pdf = 'xelatex --interaction=nonstopmode --shell-escape $*'
 
 " splits
 set splitbelow
@@ -135,7 +140,7 @@ let g:Tex_Env_frame = "\\begin{frame}{<++>}\<CR><++>\<CR>\\end{frame}\<CR><++>"
 let g:Tex_Env_defn = "\\begin{definition}[<++>]\<CR><++>\<CR>\\end{definition}\<++>"
 let g:Tex_Env_rmk = "\\begin{remark}[<++>]\<CR><++>\<CR>\\end{remark}\<++>"
 let g:Tex_Env_thm = "\\begin{theorem}[<++>]\<CR><++>\<CR>\\end{theorem}\<++>"
-" the following lines allow alt commands 
+" the following lines allow alt commands
 " http://vim-latex.sourceforge.net/documentation/latex-suite/altkey-mappings.html
 " https://tex.stackexchange.com/questions/130389/vim-latex-suite-alt-macro-not-working/249078
 let g:Tex_AdvancedMath = 1
@@ -146,7 +151,8 @@ while c <= 'z'
   exec "imap \e".c." <A-".c.">"
   let c = nr2char(1+char2nr(c))
 endw
-set timeout ttimeoutlen=50
+set timeoutlen=1000
+set ttimeoutlen=5
 
 " noremap <C-j> <Esc>/<++><CR><Esc>cf>
 noremap <M-b> <Esc>i\mathbb{<Esc>la}
@@ -166,3 +172,4 @@ autocmd FileType python set makeprg=sage\ %
 
 colorscheme murphy
 
+xnoremap <M-g> "zy:!firefox "https://www.zdic.net/hant/<c-r>=substitute(@z,' ','%20','g')<cr>"<return>gv
