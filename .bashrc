@@ -220,3 +220,10 @@ export PATH=$PATH:/usr/local/MATLAB/R2020a/bin
 alias VimLatexHeader="sudo vim /usr/share/texmf/tex/latex/latex-header"
 # sudo texhash
 
+# make tab cycle through commands after listing
+bind '"\t":menu-complete'
+bind "set show-all-if-ambiguous on"
+bind "set completion-ignore-case on"
+bind "set menu-complete-display-prefix on"
+
+alias cppwd="pwd | xclip -selection clipboard"
