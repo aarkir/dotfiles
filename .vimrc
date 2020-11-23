@@ -41,6 +41,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 " convenient sessions
 Plugin 'tpope/vim-obsession'
+Plugin 'fxn/vim-monochrome'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -170,6 +171,6 @@ autocmd Filetype python set tabstop=4|set shiftwidth=4|set expandtab
 "autocmd FileType python set makeprg=sage\ -b\ &&\ sage\ -t\ %
 autocmd FileType python set makeprg=sage\ %
 
-colorscheme murphy
+colorscheme monochrome
 
 xnoremap <M-g> "zy:!firefox "https://www.zdic.net/hant/<c-r>=substitute(@z,' ','%20','g')<cr>"<return>gv
