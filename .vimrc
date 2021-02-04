@@ -59,6 +59,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 let g:Tex_DefaultTargetFormat = 'pdf'
+" https://tex.stackexchange.com/questions/82497/how-do-i-prevent-latex-suite-from-opening-files-automatically-when-theres-an-er
+" to stop tikz from opening every time there is an error
+let g:Tex_GotoError=0
 
 
 " OLDER
