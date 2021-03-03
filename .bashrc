@@ -229,3 +229,5 @@ bind "set menu-complete-display-prefix on"
 alias cppwd="pwd | xclip -selection clipboard"
 
 alias Latexhere='nohup latexmk -pvc & okular main.pdf; vim main.tex'
+
+export PATH=$PATH:/home/atkirtland/tinker/bin

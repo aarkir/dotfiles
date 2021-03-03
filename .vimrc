@@ -41,7 +41,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 " convenient sessions
 Plugin 'tpope/vim-obsession'
+" monochrome theme I use now
 Plugin 'fxn/vim-monochrome'
+" csv
+Plugin 'chrisbra/csv.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,7 +109,7 @@ set number " obvious
 set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ g++\ -Wall\ -Wextra\ -std=c++14\ -o\ %<\ %
 autocmd FileType tex setlocal makeprg=latex\ %;xdg-open\ %<.pdf\ &
 let g:tex_flavor='latex'
-let g:Tex_CompileRule_pdf = 'xelatex $*'
+let g:Tex_CompileRule_pdf = 'xelatex --shell-escape $*'
 " let g:Tex_CompileRule_pdf = 'xelatex --interaction=nonstopmode --shell-escape $*'
 
 " splits
