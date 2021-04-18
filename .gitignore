@@ -6,18 +6,17 @@
 !.bashrc
 !.clang-format
 !.gitconfig
-!.profile
 !.theanorc
 !.tmux.conf
 !.vimrc
 !README.md
 !package-lock.json
 !package.json
+!.profile
 !.XCompose
 !.xsessionrc
 !.gnomerc
-!.xinitrc
-!.xprofile
+!setup
 !stot
 !.latexmkrc
 

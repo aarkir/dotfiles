@@ -1,0 +1,41 @@
+#!/bin/bash 
+sudo apt install vim-gtk3 ibus-rime gnome-tweaks git tmux fonts-hanazono octave okular r-base gimp libreoffice vlc texlive-full pdftk
+
+# download r studio https://www.rstudio.com/products/rstudio/download-server/debian-ubuntu/
+# download anaconda https://www.anaconda.com/products/individual/
+# download anki https://apps.ankiweb.net/
+
+# in gnome-tweaks, change compose key
+# in okular, open new files in tabs
+
+cd ~
+git clone https://github.com/atkirtland/dotfiles
+cd dotfiles
+# copy all files out
+mkdir ~/1/
+mkdir ~/2/
+cd ~/1/
+git clone https://github.com/atkirtland/latex-header
+git clone https://github.com/atkirtland/latex-notes
+git clone https://github.com/atkirtland/latex-psets
+
+# for adding the atkirtland latex package
+# we find ~/texmf using kpsewhich -var-value=TEXMFHOME
+mkdir ~/texmf
+mkdir ~/texmf/tex
+mkdir ~/texmf/tex/latex
+cd ~/texmf/tex/latex
+ln -s ~/1/latex-header .
+texhash latex-header
+
+# for vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# then run :PluginInstall in vim
+
+# for octave packages
+# from the octave prompt, run `pkg install -forge control`
+
+## for t440p (while connected to ethernet)
+# sudo apt-get install bcmwl-kernel-source
+# sudo modprobe wl
+
