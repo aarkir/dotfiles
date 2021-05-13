@@ -1,5 +1,5 @@
 #!/bin/bash 
-sudo apt install vim-gtk3 ibus-rime gnome-tweaks git tmux fonts-hanazono octave okular r-base gimp libreoffice vlc texlive-full pdftk
+sudo apt install vim-gtk3 ibus-rime gnome-tweaks git tmux fonts-hanazono octave okular r-base gimp libreoffice vlc texlive-full pdftk sagemath default-jre default-jdk cmake xclip opencc calibre
 
 # download r studio https://www.rstudio.com/products/rstudio/download-server/debian-ubuntu/
 # download anaconda https://www.anaconda.com/products/individual/
@@ -7,6 +7,8 @@ sudo apt install vim-gtk3 ibus-rime gnome-tweaks git tmux fonts-hanazono octave 
 
 # in gnome-tweaks, change compose key
 # in okular, open new files in tabs
+
+sudo timedatectl set-timezone UTC
 
 cd ~
 git clone https://github.com/atkirtland/dotfiles
@@ -28,6 +30,11 @@ cd ~/texmf/tex/latex
 ln -s ~/1/latex-header .
 texhash latex-header
 
+# for convert program (like with pdfs)
+# https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
+# add <policy domain="coder" rights="read | write" pattern="PDF" />
+# just before </policymap> in /etc/ImageMagick-7/policy.xml 
+
 # for vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # then run :PluginInstall in vim
@@ -35,7 +42,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # for octave packages
 # from the octave prompt, run `pkg install -forge control`
 
+# for sagemath
+conda config --add channels conda-forge
+conda create -n sage sage python=3.7
+# conda activate sage
+
 ## for t440p (while connected to ethernet)
 # sudo apt-get install bcmwl-kernel-source
 # sudo modprobe wl
+# in firefox, disable smooth scrolling
 

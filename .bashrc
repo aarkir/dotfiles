@@ -230,4 +230,6 @@ alias cppwd="pwd | xclip -selection clipboard"
 
 alias Latexhere='nohup latexmk -pvc & okular main.pdf; vim main.tex'
 
-export PATH=$PATH:/home/atkirtland/tinker/bin
+export PATH=$PATH:/home/atkirtland/software/tinker/bin
+export PATH=$PATH:/home/atkirtland/MGLTools-1.5.7rc1/bin
+
